@@ -45,7 +45,7 @@ input {
   outline: none;
   padding: 10px;
   font-size: 13px;
-  color: #fff;
+  color:black;
   border: 1px solid #e6ebf3 ;
   border-radius: 4px;
   box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
