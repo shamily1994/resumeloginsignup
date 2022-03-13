@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState,useEffect} from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Signup.css"
 
 function Signup() {
@@ -65,12 +66,17 @@ const validate = (values)=>{
     return errors;
 };
 
-    
+    let navigate = useNavigate();
+
+
     return (
-        
+        <div className='container'>
+            <div className='boxcontainer1'>
+           
                 <div className="signup">
+
                 
-                    <h1>Login</h1>
+                    <h1>Signup</h1>
                         <form action="" method="" onSubmit={submitForm}>
                             <input type="text" name="username" placeholder="UserName" value={formValues.username} 
                             onChange={changeHandler}
@@ -87,10 +93,12 @@ const validate = (values)=>{
                             />
                             <p>{formErrors.password}</p>
                             
-                            <button type="submit" className="btn btn-primary btn-block btn-large">Let me in.</button>
+                            <button type="submit" className="btn btn-primary btn-block btn-large" onClick={()=>{navigate("/login")}}>Let me in.</button>
                         </form>
                 </div>
-            
+                <img  className="imgclass1" src="https://media.istockphoto.com/vectors/woman-with-laptop-sitting-in-nature-and-leaves-concept-illustration-vector-id1139913278?k=20&m=1139913278&s=612x612&w=0&h=Ue0Nh74fYCnNd5hfwBCLwJ2VeZqjXxnI5iEXqqTLXb8="/>
+      </div>
+      </div>
     
     )
 }
